@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-16.0" />
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/android_device_samsung_noblelte-common" path="device/samsung/noblelte-common" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/android_device_samsung_noblelte" path="device/samsung/noblelte" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/android_hardware_samsung_slsi-cm_exynos" path="hardware/samsung_slsi-cm/exynos" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/android_hardware_samsung_slsi-cm_exynos5" path="hardware/samsung_slsi-cm/exynos5" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/android_hardware_samsung_slsi-cm_exynos7420" path="hardware/samsung_slsi-cm/exynos7420" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/android_hardware_samsung_slsi-cm_openmax" path="hardware/samsung_slsi-cm/openmax" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/android_kernel_samsung_universal7420" path="kernel/samsung/universal7420" remote="github" revision="lineage-16.0" />
+  <project name="universal7420/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="lineage-16.0" />
+</manifest>

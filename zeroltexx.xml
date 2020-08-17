@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remove-project name="android_build_soong" />
+  <project name="LineageOS/android_hardware_samsung_slsi_exynos" path="hardware/samsung_slsi/exynos" remote="github" revision="lineage-17.1" />
+  <project name="LineageOS/android_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" remote="github" revision="lineage-17.1" />
+  <project name="LineageOS/android_hardware_samsung_slsi_openmax" path="hardware/samsung_slsi/openmax" remote="github" revision="lineage-17.1" />
+  <project name="universal7420/android_build_soong" path="build/soong" remote="github" revision="rr-Q" />
+  <project name="universal7420/android_device_samsung_universal7420-common" path="device/samsung/universal7420-common" remote="github" revision="lineage-17.1" />
+  <project name="universal7420/android_device_samsung_zeroltexx" path="device/samsung/zeroltexx" remote="github" revision="rr-Q" />
+  <project name="universal7420/android_hardware_samsung" path="hardware/samsung" remote="github" revision="rr-Q" />
+  <project name="universal7420/android_hardware_samsung_slsi_exynos7420" path="hardware/samsung_slsi/exynos7420" remote="github" revision="lineage-17.1" />
+  <project name="universal7420/android_kernel_samsung_universal7420" path="kernel/samsung/universal7420" remote="github" revision="lineage-17.1" />
+  <project name="universal7420/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="lineage-17.1" />
+</manifest>

@@ -1,0 +1,33 @@
+From 31dedaf8a568d63db3abd79b2f94b5fb145661a1 Mon Sep 17 00:00:00 2001
+From: Exhigh <exhigh01@gmail.com>
+Date: Sun, 16 Aug 2020 16:41:13 +0400
+Subject: [PATCH] Keyguard: Fix wattage calculation on devices that report directly in Ampere
+
+Idea for the solution taken from commit:
+
+base: Lockscreen Charging info (3/3) by: xyyx <xyyx@mail.ru>
+
+Signed-off-by: Exhigh <exhigh@gmail.com>
+---
+ .../src/com/android/keyguard/KeyguardUpdateMonitor.java       | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/src/com/android/keyguard/KeyguardUpdateMonitor.java b/packages/SystemUI/src/com/android/keyguard/KeyguardUpdateMonitor.java
+index e6204461f11..d21f8cbc254 100644
+--- a/packages/SystemUI/src/com/android/keyguard/KeyguardUpdateMonitor.java
++++ b/packages/SystemUI/src/com/android/keyguard/KeyguardUpdateMonitor.java
+@@ -1095,7 +1095,9 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener {
+                 if (maxChargingMicroAmp > 0) {
+                     // Calculating muW = muA * muV / (10^6 mu^2 / mu); splitting up the divisor
+                     // to maintain precision equally on both factors.
+-                    maxChargingMicroWatt = (maxChargingMicroAmp / 1000)
++                    maxChargingMicroWatt = (maxChargingMicroAmp < 5 ?
++                          (maxChargingMicroAmp * 1000) : (maxChargingMicroAmp < 4000 ?
++                          maxChargingMicroAmp : (maxChargingMicroAmp / 1000)))
+                             * (maxChargingMicroVolt / 1000);
+                 } else {
+                     maxChargingMicroWatt = -1;
+-- 
+2.17.1
+
+

@@ -1,0 +1,2 @@
+build/soong soong_make_development_phases_easier.patch
+frameworks/base keyguard_fix_wattage_calc_for_ampere.patch

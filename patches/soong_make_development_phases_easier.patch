@@ -1,0 +1,49 @@
+From 14a3cc51193e4b02616d25c92aeaa9359814e26d Mon Sep 17 00:00:00 2001
+From: JoshuaDoes <joshuadoespersonalstuff@gmail.com>
+Date: Mon, 17 Aug 2020 06:03:30 -0700
+Subject: [PATCH] soong: Make development phases easier
+
+cc: Allow warnings for hardware and kernel paths
+ui: Enable usage of some tools needed for custom build tasks
+Change-Id: Ia81c03361efdfc9bf8eedd5c409074e81d18a8b4
+---
+ cc/config/global.go      | 2 ++
+ ui/build/paths/config.go | 9 +++++++++
+ 2 files changed, 11 insertions(+)
+
+diff --git a/cc/config/global.go b/cc/config/global.go
+index 7c7b47a..e3f3739 100644
+--- a/cc/config/global.go
++++ b/cc/config/global.go
+@@ -128,6 +128,8 @@ var (
+ 	// Directories with warnings from Android.bp files.
+ 	WarningAllowedProjects = []string{
+ 		"device/",
++		"hardware/",
++		"kernel/",
+ 		"vendor/",
+ 	}
+ 
+diff --git a/ui/build/paths/config.go b/ui/build/paths/config.go
+index d17b9f7..7e95698 100644
+--- a/ui/build/paths/config.go
++++ b/ui/build/paths/config.go
+@@ -176,6 +176,15 @@ var Configuration = map[string]PathConfig{
+ 	"which":     LinuxOnlyPrebuilt,
+ 	"xargs":     LinuxOnlyPrebuilt,
+ 	"xxd":       LinuxOnlyPrebuilt,
++
++	// Extra stuff needed for now
++	"aarch64-linux-android-ar":      Allowed,
++	"aarch64-linux-android-gcc":     Allowed,
++	"aarch64-linux-android-ld":      Allowed,
++	"aarch64-linux-android-nm":      Allowed,
++	"aarch64-linux-android-objcopy": Allowed,
++	"aarch64-linux-android-objdump": Allowed,
++	"aarch64-linux-android-readelf": Allowed,
+ }
+ 
+ func init() {
+-- 
+2.25.4
+

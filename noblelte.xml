@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="TeamWin/android_device_samsung_noblelte" path="device/samsung/noblelte" remote="github" revision="android-6.0" />
+  <project name="universal7420/android_device_exynos_common" path="device/exynos/common" remote="github" revision="android-6.0" />
+</manifest>
